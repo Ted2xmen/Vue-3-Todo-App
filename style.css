@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@200;400&display=swap');
+
+body{
+    font-family: 'Georama', sans-serif;
+    font-size: 1.4rem; 
+ 
+}
+
+.back {
+    background: rgb(34,193,195);
+    background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(43,125,15,1) 100%); 
+}
+
+.hover{     
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12); 
+    cursor: pointer; 
+}
+   
+.hover:hover{
+    transform: scale(1.01);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.done {
+    text-decoration:line-through;
+    text-decoration-thickness: 2px;
+    text-decoration-color: rgb(238, 241, 12);
+}
+
+.uncomp {
+    background-color: rgb(34, 78, 8);
+    color: white;
+}
+
+.comp {
+    color: green;
+}
+
+.back2 {
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 10px 10px;
+    border-radius: 30px;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid rgb(4, 187, 87);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.deneme {
+    background-color: #9e9ebe;
+}
+
+.deneme2 {
+    background-color: #d36b16;
+}
+.none {
+    text-decoration: none;
+    color: white;
+}
+
+.glass {
+
+    background: rgba( 119, 193, 38, 0.40 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 0.0px );
+-webkit-backdrop-filter: blur( 0.0px );
+border-radius: 20px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
