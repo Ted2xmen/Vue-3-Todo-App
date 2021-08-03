@@ -5,7 +5,7 @@ const app = Vue.createApp({
             filteredList : [],
             
             todoList : [
-            //     {id: 1, title: 'Add New Task', completed: false}, 
+              {id: 1, title: 'Add New Task', completed: false}, 
             //    {id: 1, title: 'Ted Some Styling', completed: false},
             //      {id: 1, title: 'Sad Local Storage Option', completed: false}, 
             ],
