@@ -25,17 +25,24 @@ body{
 .done {
     text-decoration:line-through;
     text-decoration-thickness: 2px;
-    text-decoration-color: rgb(238, 241, 12);
+    text-decoration-color: rgb(204, 16, 16);
 }
 
 .uncomp {
-    background-color: rgb(34, 78, 8);
+    background-color: rgb(5, 88, 56);
     color: white;
+
 }
 
-.comp {
-    color: green;
+.uncomp .btn {
+    /* background-color: rgb(5, 88, 56);
+    color: white;
+     */
+     background-color: white;
+     color: red;
 }
+
+
 
 .back2 {
     background-color: #e5e5f7;

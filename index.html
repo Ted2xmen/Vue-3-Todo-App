@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="https://unpkg.com/vue@next"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script> -->
     <title>V-todo✔️</title>
 </head>
@@ -80,7 +81,28 @@
         </div>
     </form>
 
-    <nav class="glass hover bg-warning  nav flex-column card col-md-2 pt-5 pb-5 mb-3 mt-3">
+    <nav class="glass hover bg-warning  nav flex-column card col-md-2 pt-5 pb-5 mb-3 mt-3"> 
+
+      
+       
+          
+        <div class="row mx-auto">
+           
+            <!-- search form -->
+            <!-- <p>{{ search }}</p>
+
+            <p>{{ filteredList }}</p> -->
+
+            <form
+            @submit.prevent=""
+             action="" class="text-center">
+                <input
+                    @keydown.enter="searchItem" 
+                 type="text" v-model="search" class="form-control px-5 p-1" placeholder="Search..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+            </form>
+               
+          
+        </div>
         <a class="nav-link active fs-4 text-dark" aria-current="page" href="#">
             <i class="bi bi-list-check"style="font-size: 1.5rem;">
                 v-All:  {{ allItemCount }} 
@@ -113,7 +135,7 @@
     </div>
 
     <li 
-        v-for="todo in todoList" 
+         v-for="todo in filteredList"
         :class="{ 'uncomp' : todo.completed, 'comp' :  todo.uncompleted}" 
         class=" list-group-item hover mt-2 mb-2 ">
         
@@ -139,7 +161,7 @@
                 <button 
                     class="btn btn-outline-danger pt-0 pb-0 pe-5 ps-5  ms-5" 
                     @click="removeItem(todo)">
-                    delete
+                    <i class="bi bi-trash"></i>
                 </button>
             </label>
           </div>

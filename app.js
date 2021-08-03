@@ -2,11 +2,14 @@ const app = Vue.createApp({
 
     data(){
         return {
+            filteredList : [],
+            
             todoList : [
-                {id: 1, title: 'Add New Task', completed: false}, 
-                // {id: 1, title: 'Add Some Styling', completed: false},
-                // {id: 1, title: 'Add Local Storage Option', completed: false}, 
+            //     {id: 1, title: 'Add New Task', completed: false}, 
+            //    {id: 1, title: 'Ted Some Styling', completed: false},
+            //      {id: 1, title: 'Sad Local Storage Option', completed: false}, 
             ],
+            search : '',
             date : new Date().toLocaleDateString(),
             clock: new Date().getHours(),
         };
@@ -28,6 +31,11 @@ const app = Vue.createApp({
             this.todoList = this.todoList.filter(todo => todo !== todoItem)
 
         },
+
+      
+
+
+
   
     },
 
@@ -41,6 +49,19 @@ const app = Vue.createApp({
         allItemCount(){
             return this.todoList.length
         },
+
+        searchItem(){
+
+            this.filteredList =  this.todoList.filter(
+                 todo => todo.title.toLowerCase().includes(this.search.toLowerCase(todo => todo !== todoItem))
+            );
+
+            
+
+
+
+        },
+
     },
 
 
