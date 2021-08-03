@@ -4,21 +4,21 @@ const app = Vue.createApp({
         return {
             todoList : [
                 {id: 1, title: 'Add New Task', completed: false}, 
-                {id: 1, title: 'Add Some Styling', completed: false},
-                {id: 1, title: 'Add Local Storage Option', completed: false}, 
+                // {id: 1, title: 'Add Some Styling', completed: false},
+                // {id: 1, title: 'Add Local Storage Option', completed: false}, 
             ],
             date : new Date().toLocaleDateString(),
             clock: new Date().getHours(),
         };
     },
- 
+    
+
     methods: {
         addTodo (event) {
             this.todoList.push({
                 id: new Date().getTime(),
                 title : event.target.value,
-                 tarih : new Date().toLocaleDateString(), 
-                // tarih: moment.locale("de").format('LLL'),
+                tarih : new Date().toLocaleDateString(),
                 completed: false
             });
             event.target.value = "";
@@ -49,4 +49,3 @@ const app = Vue.createApp({
 }).mount("#app");    
 
 
- 
